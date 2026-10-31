@@ -1,0 +1,67 @@
+.footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), #3b82f6, var(--primary-color));
+}
+
+.footer-link {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.footer-link:hover {
+  color: white;
+  padding-left: 8px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+  border-color: var(--primary-color);
+}
+
+.newsletter-input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  padding: 0.75rem 1.25rem !important;
+}
+
+.newsletter-input::placeholder {
+  color: #64748b;
+}
+
+.footer-logo-text {
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: white;
+}

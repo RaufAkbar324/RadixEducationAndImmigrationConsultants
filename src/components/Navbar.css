@@ -1,0 +1,76 @@
+.navbar {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Outfit', 'Inter', sans-serif;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar-scrolled {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5) !important;
+}
+
+
+
+.nav-hover-link {
+  position: relative;
+  transition: all 0.3s ease;
+  font-size: 1.05rem; /* Increased font size */
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85) !important;
+  padding: 0.6rem 1.2rem !important;
+  letter-spacing: 0.5px;
+}
+
+.nav-hover-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0; /* Start from left */
+  background: #3b82f6;
+  transition: width 0.5s ease; /* Slow manner transition */
+  border-radius: 50px;
+}
+
+.nav-hover-link:hover, .nav-hover-link.active {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.nav-hover-link:hover::after, .nav-hover-link.active::after {
+  width: 100%; /* Appear fully */
+}
+
+.navbar-brand img {
+  filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.3));
+  transition: all 0.4s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.08);
+}
+
+.navbar-logo-text {
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.btn-consultation {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  border: none !important;
+  padding: 10px 24px !important;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    background-color: #0f172a !important;
+  }
+  .nav-hover-link:hover {
+    background: transparent;
+  }
+}
